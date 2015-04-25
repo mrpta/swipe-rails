@@ -30,7 +30,9 @@ This is quick and dirty and is designed to help you out if you don't want to tak
       }
       @swipe = Swipe.new(swipe_params)
       
-      redirect_to @swipe.identify
+      # You can pass an optional hash containing any acceptable parameters to the identify command.
+      # For instance, td_email, td_first_name, etc.
+      redirect_to @swipe.identify({td_email: "client@domain.com", td_first_name:, @address.name})
     end
     ```
 
