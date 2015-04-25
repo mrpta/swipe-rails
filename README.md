@@ -1,7 +1,10 @@
 # swipe-rails
 A pretty basic abstractor in Ruby (on Rails) for the Swipe API modelled on examples visible here: https://www.swipehq.co.nz/tools/
 
-# Usage Example
+## Who should use this?
+This is quick and dirty and is designed to help you out if you don't want to take credit card on your site. If you want take cards on your site and use Swipe as your background processing mechanism go use [ActiveMerchant](https://github.com/Shopify/active_merchant) which supports Swipe. If you want people to input their cards directly on the Swipe screen, but still host your own cart, this might help you.
+
+## Usage Example
 
 1. Grab a copy of swipe.rb and drop it into your `app/models/` or `config/initalizers/` directory.
 2. If you don't use [Figaro](https://github.com/laserlemon/figaro) to manage ENV vars, consider doing so, or edit the following lines to suit your needs:
