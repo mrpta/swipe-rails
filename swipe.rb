@@ -55,13 +55,9 @@ class Swipe
       data = data.merge({merchant_id: @merchant_id, api_key: @api_key})
       
       url = @api_url+method+"?"+data.to_query
-      
-      begin
-        data = Net::HTTP.get_response(URI.parse(url)).body
-        JSON.parse(data)
-      rescue 
-        raise "Could not connect to #{url}"
-      end
+      response = URI.parse(url).read  
+      JSON.parse(response)
+ 
     end
   
 end
